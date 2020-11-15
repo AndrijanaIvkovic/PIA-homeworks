@@ -1,1 +1,43 @@
+body {
+    background-image: url('images/background.png');
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24pt;
+    text-align: center;
+    text-shadow: 3px 3px #999999;
+    font-weight: bold;
+}
+.zeleni_baner {
+    background-image: url('images/rbg.png');
+    margin-bottom: 1rem;
+    background-repeat: repeat-x;
+}
+.per {
+    font-size: 48pt;
+    color: red;
+    font-weight: bold;
 
+}
+div {
+    background-color: ;
+}
+
+.container {
+    background-color:;
+    margin:auto;
+}
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #A2B964;
+}
+
+#w3c {
+    float: right;
+}
