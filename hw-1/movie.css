@@ -1,3 +1,9 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url('images/background.png');
     width: 100%;
@@ -27,8 +33,10 @@ div {
 }
 
 .container {
-    background-color:;
+    background-color:#EEEEEE;
     margin:auto;
+    max-width: 55%;
+    box-shadow: 5px 5px 5px #EEEEEE;
 }
 
 footer {
