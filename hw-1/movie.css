@@ -26,26 +26,54 @@ h1 {
     font-size: 48pt;
     color: red;
     font-weight: bold;
+    top: -14px;
+    position: relative;
 
 }
 div {
     background-color: ;
 }
-
+.quuotebubble {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    width: 90%;
+    background-color: #ffffff;
+    border-color: #cccccc;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    padding: 1rem;
+    align-self: center;
+    margin: auto;
+}
 .container {
     background-color:#EEEEEE;
     margin:auto;
     max-width: 55%;
     box-shadow: 5px 5px 5px #EEEEEE;
 }
-
+.cr {
+    font-size: 13pt;
+}
+img.kriticar {
+    margin-right: 5px;
+    margin-left: 35px;
+    float: left;
+}
+img.komentar {
+    margin-right: 5px;
+}
+span.publication {
+    font-size: 13pt;
+    font-style: italic;
+}
 footer {
-    margin: 0 auto;
     text-align: center;
     padding: 0.5em;
     background-color: #A2B964;
 }
 
 #w3c {
-    float: right;
+    position: absolute;
+    right: 0px;
 }
