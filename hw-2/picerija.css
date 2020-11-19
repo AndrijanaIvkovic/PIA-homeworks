@@ -1,1 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
+
+body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: #17202A;
+}
+  
+/*--- Navigacija --*/
+  
+.navbar {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+.navbar-nav li {
+    padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+    padding-top: .8rem ;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: dodgerblue;
+}
+
+.row, .container-fluid {
+margin-left: 0px!important;
+margin-right: 0px!important;
+}
+  
+  /*--- Fiksiranje nav bara --*/
+.fixed-top  {
+   -webkit-backface-visibility: hidden;
+}
