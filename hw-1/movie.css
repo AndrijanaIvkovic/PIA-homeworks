@@ -45,6 +45,7 @@ h1 {
     margin: auto;
 }
 .flex-container {
+    display: flex;
     background-color:#EEEEEE;
     margin:auto;
     max-width: 55%;
@@ -74,7 +75,7 @@ span.publication {
     width: 200px;
 }
 dl {
-    padding: 15px;
+    padding-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 12pt;
@@ -83,12 +84,12 @@ dt {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
     font-weight: bold;
-    padding-top: 15px;
 }
 dd {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
     font-weight: bold;
+    padding-bottom: 15px;
 }
 ul {
     list-style-type: none;
