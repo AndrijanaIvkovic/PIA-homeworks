@@ -55,3 +55,23 @@ h3.heading {
     background-color: dodgerblue;
     margin: 0 auto 2rem;
 }
+
+/*--- Footer --*/
+
+footer {
+    background-color: #262d35;
+    color: white;
+    padding: 2rem 0 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+footer a {
+    color: white;
+}
+footer svg.svg-inline--fa {
+    font-size: 1.6rem;
+    margin: 1.2rem .5rem 0 0;
+}
+footer svg.svg-inline--fa:hover { 
+color: dodgerblue!important;
+}
