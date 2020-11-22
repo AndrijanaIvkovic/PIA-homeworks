@@ -32,8 +32,8 @@ h1 {
 }
 
 .quuotebubble {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 13pt;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-size: 13pt !important;
     width: 90%;
     background-color: #ffffff;
     border-color: #cccccc;
@@ -43,6 +43,10 @@ h1 {
     padding: 1rem;
     align-self: center;
     margin: auto;
+}
+.kom{
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-size: 13pt !important;
 }
 .flex-container {
     display: flex;
@@ -58,10 +62,16 @@ h1 {
 .cr {
     font-size: 13pt;
 }
+.kriticar {
+    padding: 5px;
+}
 img.kriticar {
     margin-right: 5px;
     margin-left: 35px;
     float: left;
+}
+.komentar {
+    padding-right: 5px;
 }
 img.komentar {
     margin-right: 5px;
@@ -73,6 +83,7 @@ span.publication {
 .clmn2{
     background-color: #A2B964;
     width: 200px;
+    vertical-align:top;
 }
 dl {
     padding-left: 15px;
