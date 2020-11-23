@@ -21,17 +21,20 @@ h1 {
     background-image: url('images/rbg.png');
     margin-bottom: 1rem;
     background-repeat: repeat-x;
+    
 }
 .per {
     font-size: 48pt;
     color: red;
     font-weight: bold;
-    top: -14px;
     position: relative;
-
+    top: -14px;
 }
-
-.quuotebubble {
+.kom{
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-size: 13pt !important;
+}
+.quotebubble {
     font-family: Georgia, 'Times New Roman', Times, serif !important;
     font-size: 13pt !important;
     width: 90%;
@@ -44,10 +47,7 @@ h1 {
     align-self: center;
     margin: auto;
 }
-.kom{
-    font-family: Georgia, 'Times New Roman', Times, serif !important;
-    font-size: 13pt !important;
-}
+
 .flex-container {
     display: flex;
     background-color:#EEEEEE;
@@ -55,12 +55,14 @@ h1 {
     max-width: 55%;
     box-shadow: 5px 5px 5px #999999;
 }
+
 .kritike {
     flex-direction: column;
     display: flex;
 }
 .cr {
     font-size: 13pt;
+    
 }
 .kriticar {
     padding: 5px;
@@ -69,6 +71,7 @@ img.kriticar {
     margin-right: 5px;
     margin-left: 35px;
     float: left;
+
 }
 .komentar {
     padding-right: 5px;
@@ -76,25 +79,28 @@ img.kriticar {
 img.komentar {
     margin-right: 5px;
 }
+
 span.publication {
     font-size: 13pt;
     font-style: italic;
 }
-.clmn2{
+.clmn2 {
     background-color: #A2B964;
     width: 200px;
-    vertical-align:top;
+    vertical-align: top;
 }
 dl {
     padding-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 12pt;
+    
 }
 dt {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
     font-weight: bold;
+    /*padding-top: 15px;*/
 }
 dd {
     font-family: Arial, Helvetica, sans-serif;
@@ -117,6 +123,6 @@ footer {
 }
 
 #w3c {
-    position: absolute;
-    right: 0px;
+  right: 0px;
+  position: absolute;
 }
