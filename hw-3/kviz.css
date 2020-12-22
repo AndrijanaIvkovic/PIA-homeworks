@@ -1,1 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
+body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    
+}
+.container-fluid {
+    background-color: rgb(74, 183, 206);
+    font-size: 12pt;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    border: none; 
+    vertical-align: middle;
+    min-height: 40%;
+    top:30%;
+    bottom:30%;
+    width: 100%;
+} 
+.fixed-background {
+    
+    width: 630px;
+    height: 310px;
+    background-image: url(img/kviz.jpg);
+    background-size:cover;
+    margin-bottom: 0px!important;
+    margin-left: 435px;
+}
+
+h3.naslov {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+    margin-left: 1.6rem;
+    text-align: left;
+    color: white;
+} 
+
+#pocetna {
+    background-color: rgb(74, 183, 206);
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+.form-control {
+    background-color: #4dffff;
+}
+.valid {
+    padding: 3% 10% 0% 10%;
+}
+#next{
+    margin-bottom: 15px;
+    font-size: larger;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 2px 2px 4px #5e5ea7
+}
+
+#znak {
+    height: 113px;
+    width: 90px;
+
+}
