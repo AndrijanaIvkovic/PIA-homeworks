@@ -63,3 +63,27 @@ h3.naslov {
     width: 90px;
 
 }
+#pocetak {
+    display: none;
+    font-size: large;
+    color: white;
+}
+#start {
+    display: none;
+    font-size: larger;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 4px #000099
+}
+.pravila {
+    background-color: white;
+    color: rgb(74, 183, 206);
+   
+    margin: 3% 10% 3% 10%;
+    padding: 10px 15px 5px 15px;
+    text-align: left;
+    text-align: justify;
+    font-size: large;
+    display: none;
+    box-shadow: 2px 2px 4px black;
+}
