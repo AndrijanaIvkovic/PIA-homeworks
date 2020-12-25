@@ -34,8 +34,8 @@
         <form action="#" class="valid">
             <div class="form-group">
               <label for="name"><b>Unesi ime:</b></label>
-              <input type="text" class="form-control" id="name" name="name" required>
-              
+              <input type="text" class="form-control" id="name" name="name" required />
+              <div class="valid-feedback" style="color: white;">Ok.</div>
               <div class="invalid" style="color:red;">Morate uneti ime!</div>
             </div>
             
@@ -61,7 +61,8 @@
                     tačan odgovor nosi 1 poen.
                 </p>
         </div>
-        <button type="button" class="btn btn-primary" id="start">Započni kviz</button>
+       <button type="button" onClick="location.href='index.html'" class="btn btn-primary" id="start">Dalje</button>
     </div>
+    <script src="kviz.js"></script>
 </body>
 </html>
