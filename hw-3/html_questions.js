@@ -130,3 +130,8 @@ function startTimerLine(time){
         }
     }
 }
+function queCounter(index){
+    
+    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Pitanje</span>';
+    bottom_ques_counter.innerHTML = totalQueCounTag;  
+}
