@@ -156,13 +156,13 @@ body{
 }
 
 .quiz_box header .timer .timer_sec{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     height: 30px;
     width: 45px;
     color: #fff;
     border-radius: 5px;
-    line-height: 30px;
+    line-height: 25px;
     text-align: center;
     background: #343a40;
     border: 1px solid #343a40;
