@@ -38,6 +38,26 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
+// Ako je kliknuto dugme Sledece
+next_btn.onclick = ()=>{
+    if(que_count < questions.length - 1){ //ako je broj pitanja manji od ukupne duzine pitanja
+        que_count++; //inkrementuje  pitanjae
+        que_numb++; //inkrementuje broj pitanja
+        showQuetions(que_count); //poziva showQestions funkciju
+        queCounter(que_numb); 
+        clearInterval(counter); //ocisti counter
+        clearInterval(counterLine); //ocisti counterLine
+        startTimer(timeValue); //poziv startTimer funkcije
+        startTimerLine(widthValue); //poziv startTimerLine funkcije
+        timeText.textContent = "Preostalo vreme"; 
+        next_btn.classList("show"); 
+    }else{
+        clearInterval(counter); 
+        clearInterval(counterLine);
+        showResult(); 
+    }
+}
+
 //uzimanje pitanja i opcija iz niza
 function showQuetions(index){
     const que_text = document.querySelector(".que_text");
