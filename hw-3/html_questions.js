@@ -38,6 +38,36 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
+const restart_quiz = result_box.querySelector(".buttons .restart");
+const quit_quiz = result_box.querySelector(".buttons .quit");
+
+// Ako je kliknuto Ponovi kviz 
+restart_quiz.onclick = ()=>{
+    quiz_box.classList.add("activeQuiz"); 
+    result_box.classList.remove("activeResult"); //skloni result box
+    timeValue = 20; 
+    que_count = 0;
+    que_numb = 1;
+    userScore = 0;
+    widthValue = 0;
+    showQuetions(que_count); 
+    queCounter(que_numb); 
+    clearInterval(counter); //ocisti counter
+    clearInterval(counterLine); 
+    startTimer(timeValue); //poziva startTimer funkciju
+    startTimerLine(widthValue); //poziva startTimerLine funkciju
+    timeText.textContent = "Preostalo vreme"; 
+    next_btn.classList("show"); 
+}
+
+// Ako je kliknuto Izadji 
+quit_quiz.onclick = ()=>{
+    window.location.href="kviz.html"; //vraca na pocetni prozor
+}
+
+const next_btn = document.querySelector("footer .next_btn");
+const bottom_ques_counter = document.querySelector("footer .total_que");
+
 // Ako je kliknuto dugme Sledece
 next_btn.onclick = ()=>{
     if(que_count < questions.length - 1){ //ako je broj pitanja manji od ukupne duzine pitanja
