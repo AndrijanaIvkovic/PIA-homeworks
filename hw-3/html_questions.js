@@ -130,6 +130,28 @@ function startTimerLine(time){
         }
     }
 }
+
+
+function showResult(){
+    info_box.classList.remove("activeInfo"); 
+    quiz_box.classList.remove("activeQuiz");
+    result_box.classList.add("activeResult"); 
+    const scoreText = result_box.querySelector(".score_text");
+    if (userScore > 3){ // ako je korisnik osvojio vise od 3 poena
+        
+        let scoreTag = '<span>Čestitamo! 🎉, Osvojio/la si <p>'+ userScore +'</p> od <p>'+ questions.length +'</p> poena</span>';
+        scoreText.innerHTML = scoreTag;  
+    }
+    else if(userScore > 1){ // ako je korisnik osvojio vise od 1 poena
+        let scoreTag = '<span>Super 😎, Osvojio/la si <p>'+ userScore +'</p> od <p>'+ questions.length +'</p> poena</span>';
+        scoreText.innerHTML = scoreTag;
+    }
+    else{ // ako je osvojio manje od 1
+        let scoreTag = '<span>Žao nam je 😐, Osvojio/la si <p>'+ userScore +'</p> od <p>'+ questions.length +'</p> poena</span>';
+        scoreText.innerHTML = scoreTag;
+    }
+}
+
 function queCounter(index){
     
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Pitanje</span>';
