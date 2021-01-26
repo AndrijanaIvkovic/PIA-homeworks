@@ -1,11 +1,44 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
+<?php session_start();?>
+<?php //signup
+    $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
+
+    if(isset($_POST['signup'])){
+        $name=$_POST['name1'];
+        $name01=$_POST['name2'];
+        $email=$_POST['adr'];
+        $name02=$_POST['username1'];
+        $password=$_POST['psw'];
+        $mysqli->query("INSERT INTO signup (ime, prezime, adresa, username, password) VALUES ('$name','$name01','$email','$name02','$password')");  
+        $_SESSION['username']=$name02;
+        header('location: filmovi.php?sve');
+    } 
+?>
+<?php //login
+ 
+ $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
+ if(isset($_POST['login'])){
+     $name = $_POST['uname'];
+     $password = $_POST['password1'];
+   
+     
+         $result= $mysqli->query("SELECT * FROM signup WHERE username='$name'") or die($mysqli->error);
+         $row= $result->fetch_assoc();
+         if($password == $row['password']){
+             $_SESSION['username']=$name;
+           
+             header('location: filmovi.php?sve');
+             
+         }
+         
+     
+ }
+?>
 <html lang="sr">
 <!--
 	Domaci 4 (PIA 2021)
 -->
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IMDb</title>
     <meta name="author" content="Andrijana_Ivkovic" />
@@ -22,7 +55,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </head>
 
-<body onload="onLoad()">
+<body>
 <div class="container-fluid">
     <div class="fixed-background">
     
@@ -47,7 +80,7 @@
 
                 <div class="container" style="background-color:#000">
                   <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Izađi</button>
-                  <span class="psw">Zaboravili ste <a href="#">lozinku?</a></span>
+                 <!-- <span class="psw">Zaboravili ste <a href="#">lozinku?</a></span> -->
                 </div>
               </form>
             </div>
@@ -118,40 +151,7 @@
   }
 </script>
  
-<?php //signup
-    $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
 
-    if(isset($_POST['signup'])){
-        $name=$_POST['name1'];
-        $name01=$_POST['name2'];
-        $email=$_POST['adr'];
-        $name02=$_POST['username1'];
-        $password=$_POST['psw'];
-        $mysqli->query("INSERT INTO login (name1, name2, adr, username1, psw) VALUES ('$name','$name01','$email','$name02','$password')");  
-
-        header('location: prijava.php');
-    } 
-?>
-<?php //login
- 
-    $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
-    if(isset($_POST['login'])){
-        $name = $_POST['uname'];
-        $password = $_POST['password1'];
-      
-        
-            $result= $mysqli->query("SELECT * FROM login WHERE uname='$name'") or die($mysqli->error);
-            $row= $result->fetch_assoc();
-            if($password == $row['password1']){
-                $_SESSION['uname']=$name;
-                $_SESSION['LogedIn']=1;
-                header('location: prijava.php');
-                
-            }
-            
-        
-    }
-?>
 
 </body>
 </html>
