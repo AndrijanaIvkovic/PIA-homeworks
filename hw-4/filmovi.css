@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #000000;
+}
+
+.offset:before {
+  display: block;
+  content: "";
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+/*--- Navigacija --*/
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgb(0, 0, 0) !important;
+  background-color: black;
+  color: #000000;
+}
+.navbar-brand img {
+  height: 2.5rem;
+}
+.navbar-nav li {
+  padding-right: .7rem;
+
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding-top: .8rem ;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link :hover {
+  color: rgb(255, 193, 7);
+}
+
+.fixed-top  {
+    -webkit-backface-visibility: hidden;
+ }
+
+form.example input[type=text] {
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid  rgb(245, 245, 70);
+    float: left;
+    width: 500px;
+    height: 50px;
+    background: #f1f1f1;
+}
+  
+form.example button {
+    float: left;
+    width: 7.5%;
+    padding: 12.5px;
+    background:   rgba(0,0,0,0.1);
+    background-color: #f1f1f1;
+    font-size: 17px;
+    border: 0px solid rgb(245, 245, 70) ;
+    border-left: none;
+    cursor: pointer;
+}
+  
+form.example button:hover {
+    background: rgba(0,0,0,0.2);
+}
+  
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+svg.svg-inline--fa {
+    color : #111;
+}
+.heading {
+    margin-right: 70px;
+}
+.linkovi {
+    margin-right: 70px;
+   
+}
+.linkovi a {
+	padding:10px;
+	/*color: #000000;
+	background-color: #111;
+	border:1px #111 solid;*/
+}
+
+.linkovi a:hover {
+	text-decoration:underline;
+	
+}
+
+
+.narrow {
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 2rem;
+}
+.narrow h1 {
+    font-size: 2.4rem;
+  }
+.jumbotron {
+    margin-bottom: 0!important;
+    padding: 2rem 0 3.5rem ;
+    border-radius: 0;
+}
+h3.heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.9rem;
+  color: #111;
+}
+
+footer {
+   /* background-color: rgb(52, 58, 64);*/
+    background-color: rgb(14, 12, 12);
+    color: white;
+    padding: 2rem 0 2rem;
+    margin-top: 0!important;
+    
+}
+footer a {
+    color: white;
+}
+footer svg.svg-inline--fa {
+    font-size: 1.8rem;
+    margin: 1.2rem .5rem 0 0;
+    color: white;
+}
+footer svg.svg-inline--fa:hover { 
+color: rgb(255, 193, 7)!important;
+}
+
+hr.socket {
+    width: 100%;
+    border-top: .1rem solid #2b2d30;
+    margin-top: 3rem;
+    
+}
+
+.container-fluid {
+    background-color: rgb(14, 12, 12);
+    color: white;
+    width: 100%;
+    margin-bottom: 0!important;
+    padding: 2rem 0 3.5rem ;
+    border-radius: 0;
+}
