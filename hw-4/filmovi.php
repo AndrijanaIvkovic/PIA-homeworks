@@ -1,4 +1,29 @@
 <?php session_start(); ?>
+<?php
+  if(!isset($_SESSION['username'])){
+    header('location: prijava.php');
+  }
+?>
+<?php
+  if(isset($_GET['sve'])) {
+    $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
+    $res=$mysqli->query("SELECT * FROM filmovi") or die($mysqli->error);
+  }
+?>
+<?php
+  if(isset($_GET['logout'])) {
+    session_unset();
+    session_destroy();
+    
+    header('location: prijava.php');
+  }
+?>
+<?php 
+  if(isset($_POST['lupa'])) {
+    $rec=$_POST['search'];
+    header("location: filmovi.php?src=$rec");
+  }
+?>
 <!DOCTYPE html>
 <html lang="sr">
 <!--
@@ -23,7 +48,7 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
-	
+
 <?php
   $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
   if(isset($_GET['sve'])) {
@@ -33,11 +58,15 @@
     $zanr=$_GET['link'];
     $res=$mysqli->query("SELECT * FROM filmovi WHERE zanr IN ('$zanr')") or die($mysqli->error) ;
   }
+  else if(isset($_GET['src'])) {
+    $rec2=$_GET['src'];
+    $res=$mysqli->query("SELECT * FROM filmovi WHERE naslov LIKE ('$rec2')") or die($mysqli->error);
+  }
   else { $res=null; 
   }
   
 ?>
-	
+
 <!--- Navigacija -->
 <nav class="navbar navbar-expand-md  bg-dark navbar-dark fixed-top">
     <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
@@ -48,7 +77,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="filmovi.php">Filmovi</a>
+                <a class="nav-link" href="filmovi.php?sve">Filmovi</a>
             </li>
             <li>
                 <form class="example" action="filmovi.php" style="margin:auto;max-width:1000px" method="POST">
@@ -57,7 +86,7 @@
                 </form>
             </li>
             <li>
-              <a href="filmovi.php" class="btn btn-outline-warning btn-lg"> Odjavi se </a>
+              <a href="filmovi.php?logout" class="btn btn-outline-warning btn-lg"> Odjavi se </a>
             </li>
         </ul>
     </div>
@@ -80,9 +109,9 @@
 		<a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?link=2>Trileri</a> <br />
 		<a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?link=3>Drame</a> <br />
 		<a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?link=4>Romantični</a> <br />
-    <a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?link=5>Sci-fi</a> <br />
-    <a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?link=6>Horori</a> <br />
-    <a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php>Svi filmovi</a>
+    		<a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?link=5>Sci-fi</a> <br />
+   		<a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?link=6>Horori</a> <br />
+   		<a style="color: rgb(255, 193, 7)" class="linkovi" href=filmovi.php?sve>Svi filmovi</a>
     
   </div>
   
