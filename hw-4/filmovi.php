@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="sr">
 <!--
@@ -22,7 +23,21 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
-
+	
+<?php
+  $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
+  if(isset($_GET['sve'])) {
+    $res=$mysqli->query("SELECT * FROM filmovi ") or die($mysqli->error) ;  
+  }
+  else if(isset($_GET['link'])) {
+    $zanr=$_GET['link'];
+    $res=$mysqli->query("SELECT * FROM filmovi WHERE zanr IN ('$zanr')") or die($mysqli->error) ;
+  }
+  else { $res=null; 
+  }
+  
+?>
+	
 <!--- Navigacija -->
 <nav class="navbar navbar-expand-md  bg-dark navbar-dark fixed-top">
     <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
@@ -72,6 +87,20 @@
   </div>
   
     </td>
+    <td> <!---Prikazivanje filmova -->
+      <table> 
+      
+      <?php if($res!=null) { while($red=$res->fetch_assoc()) : ?>
+      <tr><td> <?php echo $red['naslov'] ?> </td> </tr>
+      <tr><td> &nbsp </td> </tr>
+      <tr><td> <img style="height:222px; width:144px" src="<?php echo $red['slika']?>"> </td> 
+      </tr>
+      <tr><td> &nbsp </td> </tr> 
+      <?php endwhile; } ?>
+      </table>
+    </td>
+    </tr>
+    
     </table>
    
   </div>
