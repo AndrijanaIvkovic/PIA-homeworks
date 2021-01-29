@@ -19,19 +19,21 @@
  if(isset($_POST['login'])){
      $name = $_POST['uname'];
      $password = $_POST['password1'];
-   
+     $admin="admin";
      
          $result= $mysqli->query("SELECT * FROM signup WHERE username='$name'") or die($mysqli->error);
          $row= $result->fetch_assoc();
          if($password == $row['password']){
-             $_SESSION['username']=$name;
-           
-             header('location: filmovi.php?sve');
-             
+          if($row['admin'] === $admin){
+            header('location: adminStrana.php'); 
+          }
+          else{
+            header('location: filmovi.php?sve');
+          }
+          $_SESSION['username']=$name;
+          exit();
          }
-         
-     
- }
+}
 ?>
 <html lang="sr">
 <!--
