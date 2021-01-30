@@ -54,7 +54,7 @@
             <form action="izmenaAdmin.php" method="POST" style="margin-right:50px; margin-left: 50px">
             <input value="<?php echo $row['f_id'] ?>" name="id" style="visibility:visible;" >
                 <div class="row">
-                    <div class="col-25">
+                    <div class="col-25" style="color:white">
                         <label for="naslov">Naslov filma</label>
                      </div>
                 <div class="col-75">
@@ -62,7 +62,7 @@
                 </div>
                 </div>
                 <div class="row">
-                    <div class="col-25">
+                    <div class="col-25" style="color:white">
                      <label for="godina">Godina izdanja</label>
                     </div>
                     <div class="col-75">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-25">
+                    <div class="col-25" style="color:white">
                      <label for="zanr">Žanr filma</label>
                     </div>
                     <div class="col-75">
@@ -78,7 +78,7 @@
                     </div>
                     </div>
                     <div class="row">
-                        <div class="col-25">
+                        <div class="col-25" style="color:white">
                             <label for="opis">Opis filma</label>
                         </div>
                         <div class="col-75">
@@ -87,7 +87,7 @@
                     </div>
                        
                         <div class="row">
-                            <div class="col-25">
+                            <div class="col-25" style="color:white">
                                 <label for="glumci">Glumci</label>
                             </div>
                             <div class="col-75">
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-25">
+                            <div class="col-25" style="color:white">
                                 <label for="scenarista">Scenarista</label>
                             </div>
                             <div class="col-75">
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-25">
+                            <div class="col-25" style="color:white">
                                 <label for="reziser">Režiser</label>
                             </div>
                             <div class="col-75">
@@ -111,7 +111,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-25">
+                            <div class="col-25" style="color:white">
                                 <label for="prodKuca">Producentska kuća</label>
                             </div>
                             <div class="col-75">
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-25">
+                            <div class="col-25" style="color:white">
                                 <label for="trajanje">Trajanje filma</label>
                             </div>
                             <div class="col-75">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-25">
+                            <div class="col-25" style="color:white">
                                 <label for="slika">Poster</label>
                             </div>
                             <div class="col-75">
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-25">
+                            <div class="col-25" style="color:white">
                                 <label for="zanrb">Redni broj žanra</label>
                             </div>
                             <div class="col-75">
