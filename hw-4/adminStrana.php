@@ -38,7 +38,7 @@
         $name6=$_POST['reziserF'];
         $name7=$_POST['producentska'];
         $name8=$_POST['trajanjeF'];
-        $name9=addslashes($_POST['poster']);
+        $name9=$_POST['poster'];
         $name10=$_POST['zanrbr'];
         $mysqli->query("INSERT INTO filmovi (naslov, opis, zanr_filma, scenarista, reziser, producentska_kuca, glumci, godina_izdanja, slika, trajanje, zanr) VALUES ('$name','$name3','$name2','$name5','$name6','$name7','$name4','$name1','$name9','$name8','$name10')") or die($mysqli->error);
        
@@ -255,7 +255,7 @@
                                 <label for="slika">Poster</label>
                             </div>
                             <div class="col-75">
-                                <input type="file" id="slika" name="poster" placeholder="Dodajte poster filma.." style="border: 1px solid  rgb(255, 193, 7); border-radius: 4px">
+                                <input type="text" id="slika" name="poster" placeholder="Dodajte poster filma.." style="border: 1px solid  rgb(255, 193, 7); border-radius: 4px">
                             </div>
                         </div>
                         <div class="row">
