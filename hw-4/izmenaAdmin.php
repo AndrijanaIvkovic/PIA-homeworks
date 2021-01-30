@@ -18,7 +18,7 @@
         $name6=$_POST['reziserF'];
         $name7=$_POST['producentska'];
         $name8=$_POST['trajanjeF'];
-        $name9=addslashes($_POST['poster']);
+        $name9=$_POST['poster'];
         $name10=$_POST['zanrbr'];
         $id=$_POST['id'];
         $mysqli->query("UPDATE filmovi SET naslov='$name', opis='$name3', zanr_filma='$name2', scenarista='$name5', reziser='$name6', producentska_kuca='$name7', glumci='$name4', godina_izdanja=$name1, slika='$name9', trajanje='$name8', zanr=$name10 WHERE f_id=$id" ) or die($mysqli->error);
@@ -131,7 +131,7 @@
                                 <label for="slika">Poster</label>
                             </div>
                             <div class="col-75">
-                                <input value="<?php echo $row['slika'] ?>" type="file" id="slika" name="poster" placeholder="Dodajte poster filma.." style="border: 1px solid  rgb(255, 193, 7); border-radius: 4px">
+                                <input value="<?php echo $row['slika'] ?>" type="text" id="slika" name="poster" placeholder="Dodajte poster filma.." style="border: 1px solid  rgb(255, 193, 7); border-radius: 4px">
                             </div>
                         </div>
                         <div class="row">
