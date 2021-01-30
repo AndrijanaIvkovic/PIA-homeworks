@@ -45,6 +45,20 @@
         header('location: adminStrana.php?sve');
     } 
 ?>
+<?php 
+    if(isset($_GET['obrisi'])) {
+        $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
+        $i=$_GET['obrisi'];
+        $mysqli->query("DELETE FROM filmovi WHERE f_id=$i");
+        header("location: adminStrana.php?sve");
+    }
+?>
+<?php 
+    if(isset($_GET['izmeni'])) {
+        $id=$_GET['izmeni'];
+        header("location: izmenaAdmin.php?edit=$id");
+    }
+?>
 <!DOCTYPE html>
 <html lang="sr">
 <!--
@@ -91,7 +105,7 @@
 
 <!--- Navigacija -->
 <nav class="navbar navbar-expand-md  bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+    <a class="navbar-brand" href="filmovi.php?sve"><img src="img/logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -131,9 +145,9 @@
 		<a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?link=2>Trileri</a> <br />
 		<a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?link=3>Drame</a> <br />
 		<a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?link=4>Romantični</a> <br />
-    <a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?link=5>Sci-fi</a> <br />
-    <a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?link=6>Horori</a> <br />
-    <a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?sve>Svi filmovi</a>
+   		<a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?link=5>Sci-fi</a> <br />
+    		<a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?link=6>Horori</a> <br />
+   		<a style="color: rgb(255, 193, 7)" class="linkovi" href=adminStrana.php?sve>Svi filmovi</a>
     
   </div>
   
@@ -142,12 +156,17 @@
       <table> 
       
       <?php if($res!=null) { while($red=$res->fetch_assoc()) : ?>
-      <tr><td> <?php echo $red['naslov'] ?> </td> </tr>
+      <tr><td><a href="detalji_filma.php?film=<?php echo $red['naslov']?>" style="color: white"><?php  echo $red['naslov'] ?> </a></td> </tr>
       <tr><td> &nbsp </td> </tr>
       <tr><td> <img style="height:222px; width:144px" src="<?php echo $red['slika']?>"> </td> 
       </tr>
+      
+      <tr> <td> <a href="adminStrana.php?obrisi=<?php echo $red['f_id'] ?>"><button type="button" class="btn btn-warning">Obriši</button> </a> </td> 
+      <td> <a href="adminStrana.php?izmeni=<?php echo $red['f_id'] ?>"><button type="button" class="btn btn-warning" style="margin-left:-75px;">Izmeni</button> </a> </td>  </tr>  
       <tr><td> &nbsp </td> </tr> 
+      
       <?php endwhile; } ?>
+      
       </table>
     </td>
     
