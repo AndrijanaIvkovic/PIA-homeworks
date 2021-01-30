@@ -57,7 +57,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="filmovi.php?link=7">Filmovi</a>
+                <a class="nav-link" href="filmovi.php?sve">Filmovi</a>
             </li>
             <li>
                 <form class="example" action="filmovi.php" style="margin:auto;max-width:1000px">
