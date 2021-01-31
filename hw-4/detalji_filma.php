@@ -112,10 +112,10 @@
             </tr>
             <tr>
                 <td>
-                  <div class="stavka">  <p> Glumci: </p>  <?php echo  $red['glumci'] ?></div> </br>
-                  <div class="stavka"> <p> Producentska kuća: </p> <?php echo $red['producentska_kuca']  ?></div> </br>
-                  <div class="stavka" >  <p> Režiser: </p>  <?php echo $red['reziser']?></div> </br>
-                  <div class="stavka">  <p> Scenarista: </p>  <?php echo  $red['scenarista'] ?></div> </br> <br>
+		  <div class="stavka">  <p> <strong> Glumci: </strong></p>  <?php echo  $red['glumci'] ?></div> </br>
+                  <div class="stavka"> <p> <strong> Producentska kuća: </strong> </p> <?php echo $red['producentska_kuca']  ?></div> </br>
+                  <div class="stavka" >  <p> <strong> Režiser: </strong> </p>  <?php echo $red['reziser']?></div> </br>
+                  <div class="stavka">  <p> <strong> Scenarista: </strong> </p>  <?php echo  $red['scenarista'] ?></div> </br> <br>
                 </td>
             </tr>
                  
