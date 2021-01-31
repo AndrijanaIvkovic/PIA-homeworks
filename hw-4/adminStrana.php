@@ -158,7 +158,7 @@
       <?php if($res!=null) { while($red=$res->fetch_assoc()) : ?>
       <tr><td><a href="detalji_filma.php?film=<?php echo $red['naslov']?>" style="color: white"><?php  echo $red['naslov'] ?> </a></td> </tr>
       <tr><td> &nbsp </td> </tr>
-      <tr><td> <img style="height:222px; width:144px" src="<?php echo $red['slika']?>"> </td> 
+      <tr><td> <img style="height:240px; width:160px" src="<?php echo $red['slika']?>"> </td> 
       </tr>
       
       <tr> <td> <a href="adminStrana.php?obrisi=<?php echo $red['f_id'] ?>"><button type="button" class="btn btn-warning">Obriši</button> </a> </td> 
