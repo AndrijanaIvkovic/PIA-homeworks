@@ -6,8 +6,36 @@
     
     header('location: prijava.php');
   }
+
+  // get number of vote
+   $mysqli = new mysqli('localhost', 'root', '', 'imdb');
+   $naslov = $_GET['film'];
+   $result = $mysqli->query("SELECT f_id from filmovi where naslov = '".$naslov."'");
+   $row= $result->fetch_assoc();
+   $film_id = $row['f_id'];
+
+   $result = $mysqli->query("SELECT count(*) as broj from ocenjivanje where f_id = ".$film_id);
+   $row= $result->fetch_assoc();
+   $broj_ocena = $row['broj'];
+
+
+   $result = $mysqli->query("SELECT avg(ocena) as prosecna from ocenjivanje where f_id = ".$film_id);
+   $row = $result->fetch_assoc();
+   $prosecna = $row['prosecna'];
+   if($prosecna == null){
+   	$prosecna = 0;
+   }
+
+
+
+
+
+
 ?>
 <?php session_start(); ?>
+
+
+
 <!DOCTYPE html>
 <html lang="sr">
 <!--
@@ -90,6 +118,28 @@
                  
                 </td>
                 <td> <div class="ofilmu"><?php echo $red['opis'] ?></div> 
+                <td>
+                <div class="stavka"> Srednja ocena: <?php echo $prosecna; ?>   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;     Broj ocena: <?php echo $broj_ocena; ?> </div> <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <form method="POST" action="oceni.php">
+                  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  					<select name="ocena" required>
+    					<option value="1">1</option>
+    					<option value="2">2</option>
+    					<option value="3">3</option>
+    					<option value="4">4</option>
+    					<option value="5">5</option>
+    					<option value="6">6</option>
+    					<option value="7">7</option>
+    					<option value="8">8</option>
+    					<option value="9">9</option>
+    					<option value="10">10</option>
+  					</select>
+  					<input type="submit" class="btn btn-outline-warning" value="Submit">
+  					<input type="hidden" id="f_id" name="f_id" value="<?php echo $film_id; ?>">
+  					<input type="hidden" id="film" name="film" value="<?php echo $naslov; ?>">
+					</form>
+                </td>
                 </td> 
             </tr>
             <tr>
@@ -97,7 +147,9 @@
 		  <div class="stavka">  <p> <strong> Glumci: </strong></p>  <?php echo  $red['glumci'] ?></div> </br>
                   <div class="stavka"> <p> <strong> Producentska kuća: </strong> </p> <?php echo $red['producentska_kuca']  ?></div> </br>
                   <div class="stavka" >  <p> <strong> Režiser: </strong> </p>  <?php echo $red['reziser']?></div> </br>
-                  <div class="stavka">  <p> <strong> Scenarista: </strong> </p>  <?php echo  $red['scenarista'] ?></div> </br> <br>
+                  <div class="stavka">  <p> <strong> Scenarista: </strong> </p>  <?php echo  $red['scenarista'] ?></div> </br>
+
+                  
                 </td>
             </tr>
                  
