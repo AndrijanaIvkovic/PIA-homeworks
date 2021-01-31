@@ -105,7 +105,7 @@
 
 <!--- Navigacija -->
 <nav class="navbar navbar-expand-md  bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="filmovi.php?sve"><img src="img/logo.png"></a>
+    <a class="navbar-brand" href="adminStrana.php?sve"><img src="img/logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
