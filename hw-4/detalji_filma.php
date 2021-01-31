@@ -104,7 +104,7 @@
             <tr>
                 <td rowspan=2>
                   
-                    <img class="image" style="width:400px; height:550px" src="<?php echo $red['slika'] ?>"> 
+                    <img class="image" style="width:370px; height:550px" src="<?php echo $red['slika'] ?>"> 
                  
                 </td>
                 <td> <div class="ofilmu"><?php echo $red['opis'] ?></div> 
