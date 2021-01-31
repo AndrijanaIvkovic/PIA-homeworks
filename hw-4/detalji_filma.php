@@ -1,16 +1,4 @@
-<?php 
-  if(isset($_POST['lupa'])) {
-    $rec=$_POST['search'];
-    header("location: filmovi.php?src=$rec");
-  }
-?>
 
-<?php
-  if(isset($_GET['sve'])) {
-    $mysqli = new mysqli('localhost', 'root', '', 'imdb') or die(mysqli_error($mysqli));
-    $res=$mysqli->query("SELECT * FROM filmovi") or die($mysqli->error);
-  }
-?>
 <?php
   if(isset($_GET['logout'])) {
     session_unset();
@@ -58,13 +46,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="filmovi.php?sve">Filmovi</a>
-            </li>
-            <li>
-                <form class="example" action="filmovi.php" style="margin:auto;max-width:1000px">
-                    <input type="text" placeholder="Pretraži filmove" name="search2">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </li>
+	    </li>
             <li>
               <a href="filmovi.php?logout" class="btn btn-outline-warning btn-lg"> Odjavi se </a>
             </li>
