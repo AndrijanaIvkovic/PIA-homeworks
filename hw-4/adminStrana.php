@@ -116,7 +116,7 @@
                 <a class="nav-link" href="adminStrana.php?sve">Filmovi</a>
             </li>
             <li>
-                <form class="example" action="filmovi.php" style="margin:auto;max-width:1000px" method="POST">
+                <form class="example" action="adminStrana.php" style="margin:auto;max-width:1000px" method="POST">
                     <input type="text" placeholder="Pretraži filmove" name="search">
                     <button type="submit" name="lupa"><i class="fa fa-search" ></i></button>
                 </form>
