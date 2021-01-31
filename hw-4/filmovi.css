@@ -42,7 +42,12 @@ body {
 
 .fixed-top  {
     -webkit-backface-visibility: hidden;
- }
+}
+
+.row, .container-fluid {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
 
 form.example input[type=text] {
     padding: 5px;
@@ -197,3 +202,6 @@ hr.socket {
   width: 100%;
   margin-left: 90px;
 }
+
+
+
