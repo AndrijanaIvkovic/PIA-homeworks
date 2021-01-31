@@ -8,7 +8,7 @@
         $email=$_POST['adr'];
         $name02=$_POST['username1'];
         $password=$_POST['psw'];
-        $mysqli->query("INSERT INTO signup (ime, prezime, adresa, username, password) VALUES ('$name','$name01','$email','$name02','$password')");  
+        $mysqli->query("INSERT INTO signup (ime, prezime, adresa, username, password, admin) VALUES ('$name','$name01','$email','$name02','$password', ' ')") or die($mysqli->error);  
         $_SESSION['username']=$name02;
         header('location: filmovi.php?sve');
     } 
