@@ -156,7 +156,7 @@
       <table> 
       
       <?php if($res!=null) { while($red=$res->fetch_assoc()) : ?>
-      <tr><td><a href="detalji_filma.php?film=<?php echo $red['naslov']?>" style="color: white"><?php  echo $red['naslov'] ?> </a></td> </tr>
+      <tr><td><a href="detalji_filma_admin.php?film=<?php echo $red['naslov']?>" style="color: white"><?php  echo $red['naslov'] ?> </a></td> </tr>
       <tr><td> &nbsp </td> </tr>
       <tr><td> <img style="height:240px; width:160px" src="<?php echo $red['slika']?>"> </td> 
       </tr>
