@@ -161,17 +161,19 @@ hr.socket {
   font-size: 35px;
   color: white;
   font-weight: bold;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 .naziv {
   font-size: 35px;
   color: white;
   font-weight: bold;
+  margin-right: 50px;
 }
 
 .trajanje_zanr{
   font-size: 14px;
   color: white;
+  margin-right: 50px;
 }
 
 .image {
@@ -179,6 +181,7 @@ hr.socket {
   width: 100%;
   border: 0;
   padding: 0;
+  margin-right: 50px;
 }
 
 .ofilmu {
@@ -186,11 +189,11 @@ hr.socket {
   color: #f1f1f1;
   text-align: justify !important;
   margin-bottom: 10px;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 
 .stavka {
   color: white;
   width: 100%;
-  margin-left: 100px;
+  margin-left: 90px;
 }
